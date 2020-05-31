@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0",
-    "title": "covid-cluster",
+    "title": "covid-cluster-backend",
     "contact": {}
   },
-  "host": "localhost:9000",
+  "host": "https://covid-cluster-backend.herokuapp.com/",
   "basePath": "/",
   "schemes": [
     "http"
