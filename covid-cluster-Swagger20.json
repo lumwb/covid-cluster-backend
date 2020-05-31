@@ -1,0 +1,169 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "covid-cluster",
+    "contact": {}
+  },
+  "host": "localhost:9000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/covidCluster/neighbors": {
+      "get": {
+        "description": "Get the neighbours of a covid cluster",
+        "summary": "Get Neighbors",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetNeighbors",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/covidCluster": {
+      "post": {
+        "summary": "Add covid cluster",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "Addcovidcluster",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddcovidclusterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Cluster",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "DeleteCluster",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteClusterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/covidCluster/getAllClusters": {
+      "get": {
+        "summary": "Get All Clusters",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "GetAllClusters",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AddcovidclusterRequest": {
+      "title": "AddcovidclusterRequest",
+      "example": {
+        "baseClusterName": "zero",
+        "baseClusterSide": 0,
+        "newClusterName": "zero-zero"
+      },
+      "type": "object",
+      "properties": {
+        "baseClusterName": {
+          "type": "string"
+        },
+        "baseClusterSide": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "newClusterName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "baseClusterName",
+        "baseClusterSide",
+        "newClusterName"
+      ]
+    },
+    "DeleteClusterRequest": {
+      "title": "DeleteClusterRequest",
+      "example": {
+        "clusterName": "origin"
+      },
+      "type": "object",
+      "properties": {
+        "clusterName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "clusterName"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}

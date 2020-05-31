@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "bb9c51ca-d280-4275-9dc2-2cff8a385198",
+		"name": "covid-cluster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Neighbors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/covidCluster/neighbors?clusterName=origin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"covidCluster",
+						"neighbors"
+					],
+					"query": [
+						{
+							"key": "clusterName",
+							"value": "origin"
+						}
+					]
+				},
+				"description": "Get the neighbours of a covid cluster"
+			},
+			"response": []
+		},
+		{
+			"name": "Add covid cluster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"baseClusterName\": \"zero\",\n\t\"baseClusterSide\": 3,\n\t\"newClusterName\": \"origin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/covidCluster",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"covidCluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cluster",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"clusterName\": \"four\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/covidCluster",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"covidCluster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clusters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/covidCluster/getAllClusters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"covidCluster",
+						"getAllClusters"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
