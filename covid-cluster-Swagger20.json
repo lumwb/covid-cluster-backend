@@ -5,7 +5,7 @@
     "title": "covid-cluster-backend",
     "contact": {}
   },
-  "host": "https://covid-cluster-backend.herokuapp.com/",
+  "host": "covid-cluster-backend.herokuapp.com",
   "basePath": "/",
   "schemes": [
     "http"

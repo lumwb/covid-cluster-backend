@@ -28,6 +28,7 @@ To start the backend service
 ### Limitations / To be improved
 - Jest Testing
 - Improved validation to check graph still connected
-- Clearer error codes
+- Clearer error codes (unique and predefined)
+- Better swagger docs (first time doing this :P)
 
 
